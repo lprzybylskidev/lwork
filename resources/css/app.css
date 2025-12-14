@@ -1,0 +1,11 @@
+body {
+    font-family: system-ui, sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+.lwork-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

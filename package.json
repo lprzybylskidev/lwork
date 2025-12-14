@@ -1,0 +1,13 @@
+{
+    "name": "lwork-format",
+    "private": true,
+    "scripts": {
+        "build": "vite build",
+        "format": "prettier --write \"**/*.{js,css,html,php,json,md}\""
+    },
+    "devDependencies": {
+        "@prettier/plugin-php": "^0.24.0",
+        "prettier": "^3.0.0",
+        "vite": "^5.2.0"
+    }
+}

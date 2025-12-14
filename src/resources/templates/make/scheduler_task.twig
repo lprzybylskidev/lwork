@@ -1,0 +1,29 @@
+<?php declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use src\scheduler\TaskInterface;
+use src\scheduler\TaskRunner;
+
+/**
+ * @package {{ namespace }}
+ */
+final class {{ class }} implements TaskInterface
+{
+    /**
+     * @return string
+     */
+    public function name(): string
+    {
+        return '{{ name }}';
+    }
+
+    /**
+     * @param TaskRunner $runner
+     * @return void
+     */
+    public function run(TaskRunner $runner): void
+    {
+        // TODO: execute the task using $runner->runCommand() or other helpers.
+    }
+}

@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Wyłącz MultiViews, by Apache nie próbował dopasowywać plików automatycznie.
+    Options -MultiViews
+
+    # Jeśli żądany zasób istnieje, przekaż go bezpośrednio.
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Przekieruj wszystko do public/index.php, zachowując query string.
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

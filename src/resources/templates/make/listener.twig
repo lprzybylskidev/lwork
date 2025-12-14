@@ -1,0 +1,28 @@
+<?php declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use src\events\EventInterface;
+use src\events\EventListenerInterface;
+
+/**
+ * @package {{ namespace }}
+ */
+final class {{ class }} implements EventListenerInterface
+{
+    /**
+     * @return class-string<EventInterface>
+     */
+    public static function listensTo(): string
+    {
+        return EventInterface::class;
+    }
+
+    /**
+     * @param EventInterface $event
+     * @return void
+     */
+    public function handle(EventInterface $event): void
+    {
+    }
+}
